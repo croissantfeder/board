@@ -1,0 +1,98 @@
+/* 기본 스타일 */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 150px;
+    margin: 0;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    color: #A9A9A9;
+    font-size: 1em;
+    margin: 0;
+}
+
+.dock {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 18px 4px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dock button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0 15px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.dock button:hover img {
+    transform: scale(1.2);
+}
+
+.dock img {
+    width: 70px; /* 아이콘의 너비 */
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.dock .tooltip {
+    display: none;
+    position: absolute;
+    bottom: 90px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.4em;
+    white-space: nowrap;
+}
+
+.dock button:hover .tooltip {
+    display: block;
+}
+
+/* 모바일 화면에 대한 스타일 */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 100px;
+    }
+    .dock {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        bottom: 10px;
+        padding: 10px;
+    }
+    .dock button {
+        margin: 10px;
+    }
+    .dock img {
+        width: 50px;
+    }
+    .dock .tooltip {
+        bottom: 70px;
+        font-size: 1em;
+    }
+}
