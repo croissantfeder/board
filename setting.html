@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setting 페이지 - Croissant</title>
-    <style>
-        body {
-            background-color: #f0f0f0;
-            color: #333;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        h1 {
-            color: #555;
-        }
-    </style>
+    <title>Croissant</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 연결 -->
 </head>
 <body>
-    <h1>Setting 페이지</h1>
-    <p>이곳은 Setting 페이지입니다. 개인 설정을 관리하세요.</p>
-    <p><a href="index.html">돌아가기</a></p>
+    <h1>Setting</h1>
+    <p>Copyright © 2024 Croissant. 모든 권리 보유.</p>
+    <div class="dock">
+        <button onclick="window.location.href='home.html'">
+            <img src="icons/home.svg" alt="Home">
+            <div class="tooltip">Home</div>
+        </button>
+        <button onclick="window.location.href='board.html'">
+            <img src="icons/board.svg" alt="Board">
+            <div class="tooltip">Board</div>
+        </button>
+        <button onclick="window.location.href='photo.html'">
+            <img src="icons/photo.svg" alt="Photo">
+            <div class="tooltip">Photo</div>
+        </button>
+        <button onclick="window.location.href='setting.html'">
+            <img src="icons/setting.svg" alt="Setting">
+            <div class="tooltip">Setting</div>
+        </button>
+    </div>
 </body>
 </html>
