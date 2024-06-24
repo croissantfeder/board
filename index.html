@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croissant</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 150px;
+            margin: 0;
+        }
+        p {
+            font-family: Arial, sans-serif;
+            color: #A9A9A9;
+            font-size: 1em;
+            margin: 0;
+        }
+        .dock {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .dock a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-family: Arial, sans-serif;
+            font-size: 1.2em;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .dock a:hover {
+            transform: scale(1.2);
+        }
+        .dock object {
+            width: 50px;
+            height: 50px;
+        }
+        .dock .tooltip {
+            display: none;
+            position: absolute;
+            bottom: 60px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            white-space: nowrap;
+        }
+        .dock a:hover .tooltip {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Croissant</h1>
+    <p>Copyright © 2024 Croissant. 모든 권리 보유.</p>
+    <div class="dock">
+        <a href="home.html" id="home-icon">
+            <object type="image/svg+xml" data="icons/home.svg"></object>
+            <div class="tooltip">Home</div>
+        </a>
+        <a href="board.html" id="board-icon">
+            <object type="image/svg+xml" data="icons/board.svg"></object>
+            <div class="tooltip">Board</div>
+        </a>
+        <a href="photo.html" id="photo-icon">
+            <object type="image/svg+xml" data="icons/photo.svg"></object>
+            <div class="tooltip">Photo</div>
+        </a>
+        <a href="setting.html" id="setting-icon">
+            <object type="image/svg+xml" data="icons/setting.svg"></object>
+            <div class="tooltip">Setting</div>
+        </a>
+    </div>
+
+    <script>
+        // 각 Dock 아이콘 클릭 시 페이지 이동 처리
+        document.getElementById('home-icon').addEventListener('click', function(event) {
+            event.preventDefault(); // 기본 동작(페이지 이동) 방지
+            window.location.href = 'home.html'; // Home 페이지로 이동
+        });
+
+        document.getElementById('board-icon').addEventListener('click', function(event) {
+            event.preventDefault(); // 기본 동작(페이지 이동) 방지
+            window.location.href = 'board.html'; // Board 페이지로 이동
+        });
+
+        document.getElementById('photo-icon').addEventListener('click', function(event) {
+            event.preventDefault(); // 기본 동작(페이지 이동) 방지
+            window.location.href = 'photo.html'; // Photo 페이지로 이동
+        });
+
+        document.getElementById('setting-icon').addEventListener('click', function(event) {
+            event.preventDefault(); // 기본 동작(페이지 이동) 방지
+            window.location.href = 'setting.html'; // Setting 페이지로 이동
+        });
+    </script>
+</body>
+</html>
